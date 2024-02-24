@@ -1,0 +1,20 @@
+# MySQL DB
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpashop?characterEncoding=utf-8&serverTimezone=Asia/Seoul
+    username: root
+    password: 7282
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100  # 100개를 한번에 query 발사!
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
