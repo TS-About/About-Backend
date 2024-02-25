@@ -11,11 +11,11 @@ jobs:
     steps:
       # 1. VM에서 repository를 내려받음
       - name: Checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       # 2. VM에 JDK를 셋팅
       - name: Set up JDK 17 
-      - uses: actions/setup-java@v3
+        uses: actions/setup-java@v3
         with:
           java-version: '17' # 사용하는 버전으로 수전
           distribution: 'temurin' # 배포판 선택
