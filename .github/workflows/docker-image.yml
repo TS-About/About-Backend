@@ -32,7 +32,9 @@ jobs:
       
       # 4. Gradle Build
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+          pwd
+          ./gradlew build
           
       - name: Login to DockerHub
         uses: docker/login-action@v1
