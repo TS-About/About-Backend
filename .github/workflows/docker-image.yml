@@ -39,6 +39,7 @@ jobs:
       - name: Build with Gradle
         run: |
           cp ./build/libs/about-0.0.1-SNAPSHOT.jar app.jar
+          ls
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
@@ -48,5 +49,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t isayaksh/about:latest .
+          docker build -t isayaksh/about .
           docker push isayaksh/about:latest
