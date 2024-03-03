@@ -33,9 +33,12 @@ jobs:
       # 4. Gradle Build
       - name: Build with Gradle
         run: |
-          pwd
-          ls
           ./gradlew build
+
+      # 5. SNAPSHOT.jar 파일 복사
+      - name: Build with Gradle
+        run: |
+          cp ./build/libs/about-0.0.1-SNAPSHOT.jar app.jar
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
