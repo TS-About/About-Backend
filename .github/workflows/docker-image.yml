@@ -34,6 +34,7 @@ jobs:
       - name: Build with Gradle
         run: |
           pwd
+          ls
           ./gradlew build
           
       - name: Login to DockerHub
